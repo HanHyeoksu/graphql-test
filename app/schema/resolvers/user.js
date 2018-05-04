@@ -28,7 +28,7 @@ exports.Mutation = {
       }
 
       throw e;
-    }   
+    }
   },
 
   signin: async (_, data) => {
@@ -39,7 +39,7 @@ exports.Mutation = {
     }
 
     if (!(await UserService.authenticate(email, password))) {
-      throw errors.login_auth_failed;      
+      throw errors.login_auth_failed;
     }
 
     const user = await UserService.getUserByEmail(email);

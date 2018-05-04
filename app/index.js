@@ -23,7 +23,7 @@ app.use('/graphql',
         const {originalError} = err;
         const cause = (originalError && originalError.code) || 'Unknown error';
         const description = err.message;
-        
+
         return {cause, description};
       },
       context: {}
